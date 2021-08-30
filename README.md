@@ -53,13 +53,13 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 
   * [ ] Add a thunk action called fetchSmurfs that triggers a loading status display in our application, performs an axios call to retreive smurfs from our server, saves the result of that call to our state and shows an error if one is made.
   * [ ] Add a standard action that allows us to add new smurf (including the name, nickname, position, summary).
-  * [ ] Add a standard action that allows us to set the value of the error message slice of state.
+  * [x] Add a standard action that allows us to set the value of the error message slice of state.
   
 #### App.js
   Connect this component to redux **passing in your fetchSmurfs action only.** 
   
-  * [ ] Connect the fetchSmurfs actions to the App component.
-  * [ ] Call the fetchSmurfs action when the component first loads.
+  * [x] Connect the fetchSmurfs actions to the App component.
+  * [x] Call the fetchSmurfs action when the component first loads.
 
 #### components/SmurfList.js
   Connect this component to redux, **passing in your smurf array and loading status state values.** 
@@ -146,15 +146,24 @@ Example of object created in Smurf DB:
  
 ## Submission format
 
-* [ ] Submit via Codegrade by commiting and pushing any new changes.
-* [ ] Check codegrade for automated feedback.
-* [ ] Check codegrade on Monday following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+* [x] Submit via Codegrade by commiting and pushing any new changes.
+* [x] Check codegrade for automated feedback.
+* [x] Check codegrade on Monday following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
 * [ ] Any changes pushed to your <firstName-lastName> branch will resubmited to codegrade if pushed before the sprint challenge deadline. Changes after the deadline will not be reviewed.
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What problem does the context API help solve?
-2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+  Context API simplifies the passing of global variables as an alternative to props drilling.
+
+2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is 
+the store known as a 'single source of truth' in a redux application?
+  Actions are a type and payload of data which are dispatched to the reducer. Reducer handles the actions to update state. Store contains the state for our application as one object.
+
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+  Redux thunk allows us to make reducer flow asynchronous, which allows us to make an API call to dispatch an action based on the result of API call.
+
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+  Redux is my favorite state management system thus far - it simplifies state management into one state variable so I do not need to worry so much about props injection and multiple state instances.
+
