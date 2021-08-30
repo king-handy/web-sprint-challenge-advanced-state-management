@@ -9,8 +9,12 @@ export const fetchSmurfs = () => (dispatch) => {
     axios.get('http://localhost:3333/smurfs')
         .then(res => {
             console.log(res)
+            dispatch: ({ type: ADD_SMURF, payload: response.data.results })
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            console.log(err))
+            dispatch({ type: ERROR, payload: err.response.data.message })
+        }
 }
 
 //Task List:
