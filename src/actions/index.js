@@ -19,12 +19,12 @@ export const addSmurf = ( name, nickname, position, summary ) => {
     })
 }
 
-export const setError = () => {
-    return({
-        type; ERROR,
-        payload: 
-    })
-}
+// export const setError = () => {
+//     return({
+//         type; ERROR,
+//         payload: 
+//     })
+// }
 
 export const fetchSmurfs = () => (dispatch) => {
     dispatch({type: LOADING})
