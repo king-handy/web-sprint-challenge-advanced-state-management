@@ -17,10 +17,10 @@ export const reducer = (state = initialState, action) => {
         //         ...state,
         //         smurfs
         //     }
-        // case API_FAILED:
+        // case API_FAIL:
         //     return {
         //         ...state,
-        //         error
+        //         error: 'error'
         //     }
         // case ADD_SMURF:
         //     return {
