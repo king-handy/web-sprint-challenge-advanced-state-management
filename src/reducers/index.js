@@ -5,28 +5,28 @@ export const initialState = {
     error: 'error'
 }
 
-const reducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case LOADING:
-            return {
-                ...state,
-                loading: true
-            }
-        case API_SUCCESS:
-            return {
-                ...state,
-                smurfs
-            }
-        case API_FAILED:
-            return {
-                ...state,
-                error
-            }
-        case ADD_SMURF:
-            return {
-                ...state,
-                
-            }
+        // case LOADING:
+        //     return {
+        //         ...state,
+        //         loading: true
+        //     }
+        // case API_SUCCESS:
+        //     return {
+        //         ...state,
+        //         smurfs
+        //     }
+        // case API_FAILED:
+        //     return {
+        //         ...state,
+        //         error
+        //     }
+        // case ADD_SMURF:
+        //     return {
+        //         ...state,
+
+        //     }
         default:
             return state;
     }
