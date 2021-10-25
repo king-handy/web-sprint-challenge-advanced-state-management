@@ -1,3 +1,4 @@
+import { LOADING, ADD_SMURF } from "../actions";
 
 export const initialState = {
     smurfs: [],
