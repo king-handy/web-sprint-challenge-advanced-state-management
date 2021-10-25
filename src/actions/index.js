@@ -4,9 +4,9 @@ export const LOADING = 'LOADING';
 export const ADD_SMURF = 'ADD_SMURF';
 export const SET_ERROR = 'SET_ERROR';
 
-// export const loading = () => {
-//     return({type: LOADING, payload:})
-// }
+export const loading = () => {
+    return({type: LOADING})
+}
 
 export const addSmurf = ( name, nickname, position, summary ) => {
     return({
@@ -16,6 +16,13 @@ export const addSmurf = ( name, nickname, position, summary ) => {
             position: position,
             summary: summary
         }
+    })
+}
+
+export const setError = () => {
+    return({
+        type; ERROR,
+        payload: 
     })
 }
 

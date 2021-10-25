@@ -8,11 +8,11 @@ export const initialState = {
 
 export const reducer = (state = initialState, action) => {
     switch(action.type) {
-        // case LOADING:
-        //     return {
-        //         ...state,
-        //         loading: true,
-        //     }
+        case LOADING:
+            return {
+                ...state,
+                loading: true,
+            }
         // case API_SUCCESS:
         //     return {
         //         ...state,
@@ -23,11 +23,11 @@ export const reducer = (state = initialState, action) => {
         //         ...state,
         //         error: 'error'
         //     }
-        // case ADD_SMURF:
-        //     return {
-        //         ...state,
-
-        //     }
+        case ADD_SMURF:
+            return {
+                ...state,
+                smurfs: [...state.smurfs, action.payload]
+            };
         default:
             return state;
     }
