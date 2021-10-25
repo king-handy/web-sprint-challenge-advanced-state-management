@@ -2,7 +2,7 @@
 export const initialState = {
     smurfs: [],
     loading: false,
-    error: 'error'
+    error: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -10,7 +10,7 @@ export const reducer = (state = initialState, action) => {
         // case LOADING:
         //     return {
         //         ...state,
-        //         loading: true
+        //         loading: true,
         //     }
         // case API_SUCCESS:
         //     return {
