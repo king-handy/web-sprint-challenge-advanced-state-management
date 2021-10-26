@@ -4,6 +4,7 @@ import Smurf from './Smurf';
 import { addSmurf } from '../actions';
 
 const SmurfList = (props) => {
+    console.log(props);
     const isLoading = false;
     const testSmurf = {
         id:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
@@ -19,9 +20,9 @@ const SmurfList = (props) => {
 
     return(
         <div className="listContainer">
-            this.props.testSmurf.map(smurf => {
-                <Smurf smurf={testSmurf} />
-            })
+            {props.smurfs.map(smurf => {
+                return <Smurf smurf={smurf} />
+            })}
         </div>);
 }
 

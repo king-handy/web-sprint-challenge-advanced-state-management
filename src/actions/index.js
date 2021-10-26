@@ -3,6 +3,7 @@ import axios from 'axios';
 export const LOADING = 'LOADING';
 export const ADD_SMURF = 'ADD_SMURF';
 export const SET_ERROR = 'SET_ERROR';
+export const API_SUCCESS = 'API_SUCCESS';
 
 export const loading = () => {
     return({type: LOADING})
@@ -28,14 +29,14 @@ export const addSmurf = ( name, nickname, position, summary ) => {
 
 export const fetchSmurfs = () => (dispatch) => {
     dispatch({type: LOADING})
-    axios.get('https://localhost:3333/smurfs')
+    axios.get('http://localhost:3333/smurfs')
         .then(res => {
             console.log(res)
-            // dispatch: ({ type: ADD_SMURF })
+            dispatch({ type: API_SUCCESS, payload: res.data })
         })
         .catch(err => {
             console.log(err);
-            // dispatch: ({ type: SET_ERROR, payload: err.res.data.results })
+            // dispatch({ type: SET_ERROR, payload: err.res.data.results })
         })
 }
 

@@ -1,4 +1,4 @@
-import { LOADING, ADD_SMURF } from "../actions";
+import { LOADING, ADD_SMURF, API_SUCCESS } from "../actions";
 
 export const initialState = {
     smurfs: [],
@@ -13,11 +13,11 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 loading: true,
             }
-        // case API_SUCCESS:
-        //     return {
-        //         ...state,
-        //         smurfs
-        //     }
+        case API_SUCCESS:
+            return {
+                ...state,
+                smurfs: action.payload
+            }
         // case API_FAIL:
         //     return {
         //         ...state,
